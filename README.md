@@ -39,6 +39,35 @@ Now thanks to [JSON: 1.1 # JSON with Extensions (JSONX)](https://jsonii.github.i
 make JSON Feed easier-to-write and easier-to-read.
 How about?
 
+
+** "Classic" Colon (:) Variant 1a**
+
+Note: You can use unquoted keys  and all commas are optional.
+
+```
+ # JSON Feed shortened w/ JSON v1.1, JSON with Extensions (JSONX)
+ 
+ version       : '1'
+ title         : 'My Example Feed'
+ home_page_url : 'https://example.org/'
+ feed_url      : 'https://example.org/feed.json'
+ items         : [
+ { 
+    id           : '2'
+    content_text : 'This is a second item.'
+    url          : 'https://example.org/second-item'
+ } {
+    id           : '1'
+    content_html : '<p>Hello, world!</p>'
+    url          : 'https://example.org/initial-post'
+ }]
+ ```
+
+
+** "Classic" Colon (:) Variant 1b with (<..-..> Shortcuts**
+
+Note: You can shortcut `[{..},{..}]` with `<..-..>`.
+
 ```
  # JSON Feed shortened w/ JSON v1.1, JSON with Extensions (JSONX)
  
@@ -56,6 +85,30 @@ How about?
     url          : 'https://example.org/initial-post'
  >
  ```
+ 
+** "Aternate" Equals (=) Variant 2**
+
+Note: Using `=` as key/value separator lets you use unquoted urls or datetimes - because the colon (`:`) is no longer special.
+
+```
+ # JSON Feed shortened w/ JSON v1.1, JSON with Extensions (JSONX)
+ 
+ version       = '1'
+ title         = 'My Example Feed'
+ home_page_url = https://example.org/
+ feed_url      = https://example.org/feed.json
+ items         = 
+ <  id           = '2'
+    content_text = 'This is a second item.'
+    url          = https://example.org/second-item
+    -
+    id           = '1'
+    content_html = '<p>Hello, world!</p>'
+    url          = https://example.org/initial-post
+ >
+ ```
+ 
+ 
  
 
 ## Spec
