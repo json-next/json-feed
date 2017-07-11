@@ -86,7 +86,7 @@ Note: You can shortcut `[{..},{..}]` with `<..-..>`.
  >
  ```
  
-**"Aternate" Equals (=) Variant**
+**"Alternate" Equals (=) Variant**
 
 Note: Using `=` as key/value separator lets you use unquoted urls or datetimes - because the colon (`:`) is no longer special.
 
@@ -171,7 +171,7 @@ items           :
   >
 ```
 
-**"Aternate" Equals (=) Variant**
+**"Alternate" Equals (=) Variant**
 
 ``` text
 version         = '1'
