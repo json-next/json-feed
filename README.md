@@ -11,7 +11,7 @@ _JSON Feed Evolved for Humans - Easy-to-Write, Easy-to-Read_
 
 _What's a Feed in JSON with Extensions (JSONX) in JSON v1.1? Why? Why?_
 
-JSON Feed is a feed format similar to RSS and Atom in JSON. Example:
+JSON Feed is a feed format similar to RSS and Atom in JSON. See [jsonfeed.org »](https://jsonfeed.org). Example:
 
 ```
 {
@@ -33,8 +33,6 @@ JSON Feed is a feed format similar to RSS and Atom in JSON. Example:
     ]
 }
 ```
-
-See  [jsonfeed.org »](https://jsonfeed.org).
 
 
 Now thanks to [JSON: 1.1 # JSON with Extensions (JSONX)](https://jsonii.github.io) let's 
@@ -65,7 +63,7 @@ How about?
 
 ## Spec
 
-_JSON v1.1 Feed Format Specification in English_
+_Feed Format Specification in English_
 
 JSON v1.1 Feed follows JSON Feed but allows allows all JSON v1.1 extensions e.g.:
 
