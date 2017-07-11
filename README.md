@@ -237,6 +237,14 @@ the same as ye old' "vanilla" JSON:
 ```
 
 
+## More Feed Formats
+
+- [**Feed.TXT**](https://feedtxt.github.io) - free feeds format in plain text w/ structured meta data
+- [**Feed.HTML**](https://feedhtml.github.io) -  free feeds format in hypertext markup language (html) w/ structured meta data
+- For more formats see the [Formats @ Awesome Feeds](https://github.com/feedparser/awesome-feeds#formats) collection.
+
+
+
 ## Meta
 
 **License**
