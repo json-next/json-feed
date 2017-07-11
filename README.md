@@ -42,7 +42,7 @@ How about?
 ```
  # JSON Feed Simplified w/ JSON v1.1, JSON with Extensions (JSONX)
  
- version       : 1
+ version       : '1'
  title         : 'My Example Feed'
  home_page_url : 'https://example.org/'
  feed_url      : 'https://example.org/feed.json'
@@ -86,7 +86,7 @@ Plus some extras for JSON Feed:
 **Podcast**
 
 ``` text
-version         : 1
+version         : '1'
 user_comment    : 'This is a podcast feed. You can add this feed to your podcast client using the following URL: http://therecord.co/feed.json'
 title           : 'The Record'
 home_page_url   : 'http://therecord.co/'
