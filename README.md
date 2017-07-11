@@ -15,20 +15,20 @@ JSON Feed is a feed format similar to RSS and Atom in JSON. See [jsonfeed.org »
 
 ```
 {
-    "version": "https://jsonfeed.org/version/1",
-    "title": "My Example Feed",
+    "version":       "https://jsonfeed.org/version/1",
+    "title":         "My Example Feed",
     "home_page_url": "https://example.org/",
-    "feed_url": "https://example.org/feed.json",
+    "feed_url":      "https://example.org/feed.json",
     "items": [
         {
-            "id": "2",
+            "id":           "2",
             "content_text": "This is a second item.",
-            "url": "https://example.org/second-item"
+            "url":          "https://example.org/second-item"
         },
         {
-            "id": "1",
+            "id":           "1",
             "content_html": "<p>Hello, world!</p>",
-            "url": "https://example.org/initial-post"
+            "url":          "https://example.org/initial-post"
         }
     ]
 }
@@ -40,24 +40,21 @@ make JSON Feed easier-to-write and easier-to-read.
 How about?
 
 ```
- # JSON Feed Simplified w/ JSON v1.1, JSON with Extensions (JSONX)
+ # JSON Feed shortened w/ JSON v1.1, JSON with Extensions (JSONX)
  
  version       : '1'
  title         : 'My Example Feed'
  home_page_url : 'https://example.org/'
  feed_url      : 'https://example.org/feed.json'
- items         : [
-   {
-     id           : '2'
-     content_text : 'This is a second item.'
-     url          : 'https://example.org/second-item'
-   }
-   {
-     id           : '1'
-     content_html : '<p>Hello, world!</p>'
-     url          : 'https://example.org/initial-post'
-   }
- ]
+ items         : 
+ <  id           : '2'
+    content_text : 'This is a second item.'
+    url          : 'https://example.org/second-item'
+    -
+    id           : '1'
+    content_html : '<p>Hello, world!</p>'
+    url          : 'https://example.org/initial-post'
+ >
  ```
  
 
@@ -71,6 +68,8 @@ JSON v1.1 Feed follows JSON Feed but allows all JSON v1.1 extensions e.g.:
 - single line comments start with `#` or `//`
 - commas after object key-value pairs are optional
 - commas after array items are optional
+- `<..>`shortcut for `[{..}]`
+- `-` shortcut for `},{` 
 - and much more
 
 Plus some extras for JSON Feed:
@@ -91,34 +90,30 @@ user_comment    : 'This is a podcast feed. You can add this feed to your podcast
 title           : 'The Record'
 home_page_url   : 'http://therecord.co/'
 feed_url        : 'http://therecord.co/feed.json'
-items           : [
-    {
-        id    : 'http://therecord.co/chris-parrish'
-        title : 'Special #1 - Chris Parrish'
-        url   : 'http://therecord.co/chris-parrish'
-        content_text : `Chris has worked at Adobe and as a founder of Rogue Sheep, 
+items           :    
+  < id            : 'http://therecord.co/chris-parrish'
+    title         : 'Special #1 - Chris Parrish'
+    url           : 'http://therecord.co/chris-parrish'
+    content_text  : `Chris has worked at Adobe and as a founder of Rogue Sheep, 
                         which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled 
                         with Guy English - which shipped Napkin, a Mac app for visual collaboration. 
                         Chris is also the co-host of The Record. He lives on Bainbridge Island, 
                         a quick ferry ride from Seattle.`
-        content_html : `Chris has worked at <a href="http://adobe.com/">Adobe</a> and as a founder of Rogue Sheep,
+    content_html  : `Chris has worked at <a href="http://adobe.com/">Adobe</a> and as a founder of Rogue Sheep,
                         which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled
                         with Guy English - which shipped <a href="http://aged-and-distilled.com/napkin/">Napkin</a>, 
                         a Mac app for visual collaboration. Chris is also the co-host of The Record. 
                         He lives on <a href="http://www.ci.bainbridge-isl.wa.us/">Bainbridge Island</a>, 
                         a quick ferry ride from Seattle.`
-        summary : 'Brent interviews Chris Parrish, co-host of The Record and one-half of Aged & Distilled.'
-        date_published : '2014-05-09T14:04:00-07:00',
-        attachments    : [
-            {
-                url           : 'http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a'
-                mime_type     : 'audio/x-m4a'
-                size_in_bytes : 89_970_236
-                duration_in_seconds : 6_629
-             }
-        ]
-    }
-]
+    summary        : 'Brent interviews Chris Parrish, co-host of The Record and one-half of Aged & Distilled.'
+    date_published : '2014-05-09T14:04:00-07:00'
+    attachments    : 
+    <  url           : 'http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a'
+       mime_type     : 'audio/x-m4a'
+       size_in_bytes : 89_970_236
+       duration_in_seconds : 6_629
+    >
+  >
 ```
 
 the same as:
