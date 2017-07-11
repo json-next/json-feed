@@ -137,7 +137,7 @@ Plus some extras for JSON Feed:
 
 ### Podcast
 
-**"Classic" Colon (:) Variant with (<..-..> Shortcuts**
+**"Classic" Colon (:) Variant with (<..-..>) Shortcuts**
 
 ``` text
 version         : '1'
@@ -205,7 +205,7 @@ items           =
   >
 ```
 
-the same as "vanilla" ye old' JSON:
+the same as ye old' "vanilla" JSON:
 
 ```
 {
