@@ -1,14 +1,15 @@
 
 Comments • Unquoted keys • Multi-line strings • Trailing commas • Optional commas • Auto-Wrapped in Object/Hash • Simple Version • and more
 
-# JSON: 1.1 # JSON with Extensions (JSONX) Feed
+
+# JSON v1.1 Feed
 
 _JSON Feed Evolved for Humans - Easy-to-Write, Easy-to-Read_ 
 
 
 ## Welcome
 
-_What's a Feed in JSON with Extension? Why? Why?_
+_What's a Feed in JSON with Extensions (JSONX) in JSON v1.1? Why? Why?_
 
 JSON Feed is a feed format similar to RSS and Atom in JSON. Example:
 
@@ -33,10 +34,10 @@ JSON Feed is a feed format similar to RSS and Atom in JSON. Example:
 }
 ```
 
-See  [jsonfeed.org](https://jsonfeed.org).
+See  [jsonfeed.org »](https://jsonfeed.org).
 
 
-Now thanks to JSON: 1.1 # JSON with Extensions (JSONX) let's 
+Now thanks to [JSON: 1.1 # JSON with Extensions (JSONX)](https://jsonii.github.io) let's 
 make JSON Feed easier-to-write and easier-to-read.
 How about?
 
@@ -66,7 +67,7 @@ How about?
 
 _JSON v1.1 Feed Format Specification in English_
 
-JSON v1.1 Feed follows JSON feeds but allows allows all JSON v1.1 JSON extensions e.g.:
+JSON v1.1 Feed follows JSON Feed but allows allows all JSON v1.1 extensions e.g.:
 
 - quotes for strings are optional if they follow JavaScript identifier rules (with some additions e.g. `.-+/^@`)
 - single line comments start with `#` or `//`
@@ -74,12 +75,84 @@ JSON v1.1 Feed follows JSON feeds but allows allows all JSON v1.1 JSON extension
 - commas after array items are optional
 - and much more
 
-Plus some more extra for JSON Feed:
+Plus some extras for JSON Feed:
 
 - feed gets auto-wrapped in object, that is, `{ ... }`
 - version number gets shortend to `1` instead of `https://jsonfeed.org/version/1`
 
 
+
+## Examples
+
+
+**Podcast**
+
+``` text
+version         : 1
+user_comment    : 'This is a podcast feed. You can add this feed to your podcast client using the following URL: http://therecord.co/feed.json'
+title           : 'The Record'
+home_page_url   : 'http://therecord.co/'
+feed_url        : 'http://therecord.co/feed.json'
+items           : [
+    {
+        id    : 'http://therecord.co/chris-parrish'
+        title : 'Special #1 - Chris Parrish'
+        url   : 'http://therecord.co/chris-parrish'
+        content_text : `Chris has worked at Adobe and as a founder of Rogue Sheep, 
+                        which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled 
+                        with Guy English - which shipped Napkin, a Mac app for visual collaboration. 
+                        Chris is also the co-host of The Record. He lives on Bainbridge Island, 
+                        a quick ferry ride from Seattle.`
+        content_html : `Chris has worked at <a href="http://adobe.com/">Adobe</a> and as a founder of Rogue Sheep,
+                        which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled
+                        with Guy English - which shipped <a href="http://aged-and-distilled.com/napkin/">Napkin</a>, 
+                        a Mac app for visual collaboration. Chris is also the co-host of The Record. 
+                        He lives on <a href="http://www.ci.bainbridge-isl.wa.us/">Bainbridge Island</a>, 
+                        a quick ferry ride from Seattle.`
+        summary : 'Brent interviews Chris Parrish, co-host of The Record and one-half of Aged & Distilled.'
+        date_published : '2014-05-09T14:04:00-07:00',
+        attachments    : [
+            {
+                url           : 'http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a'
+                mime_type     : 'audio/x-m4a'
+                size_in_bytes : 89_970_236
+                duration_in_seconds : 6_629
+             }
+        ]
+    }
+]
+```
+
+the same as:
+
+```
+{
+    "version": "https://jsonfeed.org/version/1",
+    "user_comment": "This is a podcast feed. You can add this feed to your podcast client using the following URL: http://therecord.co/feed.json",
+    "title": "The Record",
+    "home_page_url": "http://therecord.co/",
+    "feed_url": "http://therecord.co/feed.json",
+    "items": [
+        {
+            "id": "http://therecord.co/chris-parrish",
+            "title": "Special #1 - Chris Parrish",
+            "url": "http://therecord.co/chris-parrish",
+            "content_text": "Chris has worked at Adobe and as a founder of Rogue Sheep, which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled with Guy English - which shipped Napkin, a Mac app for visual collaboration. Chris is also the co-host of The Record. He lives on Bainbridge Island, a quick ferry ride from Seattle.",
+            "content_html": "Chris has worked at <a href=\"http://adobe.com/\">Adobe</a> and as a founder of Rogue Sheep, which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled with Guy English - which shipped <a href=\"http://aged-and-distilled.com/napkin/\">Napkin</a>, a Mac app for visual collaboration. Chris is also the co-host of The Record. He lives on <a href=\"http://www.ci.bainbridge-isl.wa.us/\">Bainbridge Island</a>, a quick ferry ride from Seattle.",
+            "summary": "Brent interviews Chris Parrish, co-host of The Record and one-half of Aged & Distilled.",
+            "date_published": "2014-05-09T14:04:00-07:00",
+            "attachments": [
+                {
+                    "url": "http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a",
+                    "mime_type": "audio/x-m4a",
+                    "size_in_bytes": 89970236,
+                    "duration_in_seconds": 6629
+                }
+            ]
+        }
+    ]
+}
+```
 
 
 ## Meta
@@ -88,7 +161,7 @@ Plus some more extra for JSON Feed:
 
 ![](https://publicdomainworks.github.io/buttons/zero88x31.png)
 
-The JSON with Extensions format is dedicated to the public domain. Use it as you please with no restrictions whatsoever.
+The JSON v1.1 Feed format is dedicated to the public domain. Use it as you please with no restrictions whatsoever.
 
 **Questions? Comments?**
 
