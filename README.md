@@ -65,7 +65,7 @@ How about?
 
 _Feed Format Specification in English_
 
-JSON v1.1 Feed follows JSON Feed but allows allows all JSON v1.1 extensions e.g.:
+JSON v1.1 Feed follows JSON Feed but allows all JSON v1.1 extensions e.g.:
 
 - quotes for strings are optional if they follow JavaScript identifier rules (with some additions e.g. `.-+/^@`)
 - single line comments start with `#` or `//`
