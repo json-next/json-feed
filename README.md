@@ -1,5 +1,5 @@
 
-Comments • Unquoted keys • Multi-line strings • Trailing commas • Optional commas • Auto-wrapped feeds • Simple version string • `<..-..>` shortcuts • Optional `=` is the new `:` • and more
+Comments • Unquoted keys • Multi-line strings • Trailing commas • Optional commas • Auto-wrapped feed object • Simple feed version string • `<..-..>` shortcuts • Optional `=` is the new `:` • and more
 
 
 # JSON v1.1 Feed
