@@ -40,7 +40,7 @@ make JSON Feed easier-to-write and easier-to-read.
 How about?
 
 
-** "Classic" Colon (:) Variant 1a**
+**"Classic" Colon (:) Variant**
 
 Note: You can use unquoted keys  and all commas are optional.
 
@@ -64,7 +64,7 @@ Note: You can use unquoted keys  and all commas are optional.
  ```
 
 
-** "Classic" Colon (:) Variant 1b with (<..-..> Shortcuts**
+**"Classic" Colon (:) Variant with (<..-..>) Shortcuts**
 
 Note: You can shortcut `[{..},{..}]` with `<..-..>`.
 
@@ -86,7 +86,7 @@ Note: You can shortcut `[{..},{..}]` with `<..-..>`.
  >
  ```
  
-** "Aternate" Equals (=) Variant 2**
+**"Aternate" Equals (=) Variant**
 
 Note: Using `=` as key/value separator lets you use unquoted urls or datetimes - because the colon (`:`) is no longer special.
 
@@ -135,7 +135,9 @@ Plus some extras for JSON Feed:
 ## Examples
 
 
-**Podcast**
+### Podcast
+
+**"Classic" Colon (:) Variant with (<..-..> Shortcuts**
 
 ``` text
 version         : '1'
@@ -162,14 +164,48 @@ items           :
     date_published : '2014-05-09T14:04:00-07:00'
     attachments    : 
     <  url           : 'http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a'
-       mime_type     : 'audio/x-m4a'
+       mime_type     : audio/x-m4a
        size_in_bytes : 89_970_236
        duration_in_seconds : 6_629
     >
   >
 ```
 
-the same as:
+**"Aternate" Equals (=) Variant**
+
+``` text
+version         = '1'
+user_comment    = 'This is a podcast feed. You can add this feed to your podcast client using the following URL: http://therecord.co/feed.json'
+title           = 'The Record'
+home_page_url   = http://therecord.co/
+feed_url        = http://therecord.co/feed.json
+items           =    
+  < id            = http://therecord.co/chris-parrish
+    title         = 'Special #1 - Chris Parrish'
+    url           = http://therecord.co/chris-parrish
+    content_text  = `Chris has worked at Adobe and as a founder of Rogue Sheep, 
+                        which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled 
+                        with Guy English - which shipped Napkin, a Mac app for visual collaboration. 
+                        Chris is also the co-host of The Record. He lives on Bainbridge Island, 
+                        a quick ferry ride from Seattle.`
+    content_html  = `Chris has worked at <a href="http://adobe.com/">Adobe</a> and as a founder of Rogue Sheep,
+                        which won an Apple Design Award for Postage. Chris's new company is Aged & Distilled
+                        with Guy English - which shipped <a href="http://aged-and-distilled.com/napkin/">Napkin</a>, 
+                        a Mac app for visual collaboration. Chris is also the co-host of The Record. 
+                        He lives on <a href="http://www.ci.bainbridge-isl.wa.us/">Bainbridge Island</a>, 
+                        a quick ferry ride from Seattle.`
+    summary        = 'Brent interviews Chris Parrish, co-host of The Record and one-half of Aged & Distilled.'
+    date_published = 2014-05-09T14:04:00-07:00
+    attachments    = 
+    <  url           = http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a
+       mime_type     = audio/x-m4a
+       size_in_bytes = 89_970_236
+       duration_in_seconds = 6_629
+    >
+  >
+```
+
+the same as "vanilla" ye old' JSON:
 
 ```
 {
