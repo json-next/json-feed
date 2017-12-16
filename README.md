@@ -35,7 +35,7 @@ JSON Feed is a feed format similar to RSS and Atom in JSON. See [jsonfeed.org »
 ```
 
 
-Now thanks to [JSON: 1.1 # JSON with Extensions (JSONX)](https://jsonii.github.io) let's 
+Now thanks to [JSON: 1.1 # JSON with Extensions (JSONX)](https://json-next.github.io) let's 
 make JSON Feed easier-to-write and easier-to-read.
 How about?
 
